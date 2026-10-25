@@ -1,0 +1,63 @@
+name: Bug
+description: Something is broken. One bug per issue.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One bug per issue. If you found three things in one session, file three issues — a session write-up is not an issue.
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: One or two sentences. What happens, and what should happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The exact commands. Every Godot run goes through `tools/godot-bg.sh` — never the binary. Name the probe or selftest if one shows it.
+      placeholder: |
+        tools/godot-bg.sh --timeout 300 /abs/log.txt --bench=autopilot --flow-rate=0.5
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: The numbers
+      description: Measured, not impressions. Before and after, pass counts, frame times, byte counts — whatever makes this checkable by someone else.
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where it lives
+      description: Files and symbols as `path/to/file.gd:LINE`, if known.
+  - type: dropdown
+    id: device
+    attributes:
+      label: Seen on
+      multiple: true
+      options:
+        - Steam Deck (1280x800)
+        - Development Mac
+        - iPhone or iPad
+        - Two devices over a real link
+        - Loopback / one machine
+    validations:
+      required: true
+  - type: textarea
+    id: pictures
+    attributes:
+      label: Pictures
+      description: Drag in the screenshot, the capture or the contact sheet. A UI bug without a picture is a description of a picture. Captures at 1280x800 (a Deck) are the ones that decide it. Required. If the bug cannot be seen (a crash log, a wrong number), say so in one line.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: What done looks like
+      description: The check that will say it is fixed. A UI change is not done until somebody has looked at a capture of it.
+    validations:
+      required: true

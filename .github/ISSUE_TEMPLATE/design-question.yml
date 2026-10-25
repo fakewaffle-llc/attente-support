@@ -1,0 +1,41 @@
+name: Design question
+description: An OPEN question that needs the owner before anyone writes code.
+labels: ["design-question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `CLAUDE.md`: **do not resolve an OPEN question by implication.** Building something that quietly assumes an answer settles a design decision by accident. A proposal is fine when it is labelled as one.
+  - type: textarea
+    id: question
+    attributes:
+      label: The question
+      description: One sentence, ending in a question mark.
+    validations:
+      required: true
+  - type: textarea
+    id: blocks
+    attributes:
+      label: What it blocks
+      description: What cannot be built, or what would have to be redone, until this is answered. If it blocks nothing, say so.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: The options, and what each costs
+      description: Two or three, each with its consequence. Include what happens if we get it wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups and references
+      description: Drag in mockups, concept art from `art/out/`, or a contact sheet of the options side by side. A visual decision is made from a picture, not a paragraph. Required. If nothing about the question can be seen, say so in one line.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal (a proposal, not a decision)
+      description: What you would do, said plainly as a recommendation the owner can overrule.

@@ -1,0 +1,54 @@
+name: Work
+description: Something decided and not built. An agent can pick this up.
+labels: ["work"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is work the owner has already called. If it still needs a decision from him, file a **Design question** instead — `CLAUDE.md` forbids settling an OPEN question by implication.
+  - type: textarea
+    id: what
+    attributes:
+      label: What to build
+      description: A verb and an object. What will exist when this is done that does not exist now.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why, and who decided it
+      description: The owner's words where they matter, and the date. Say what it is for.
+    validations:
+      required: true
+  - type: textarea
+    id: read
+    attributes:
+      label: What to read first
+      description: The `CLAUDE.md` rules that bite, the doc sections, and the code paths.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: The non-obvious ones. Network seam; no fluid simulation; one game on every platform; animals are look only; no money in the game; no mouse cursor; physical key positions, never characters.
+  - type: textarea
+    id: pictures
+    attributes:
+      label: Mockups and references
+      description: Required. Drag in whatever shows what this should look like when it is done — an in-game render, a mockup, the concept frame from `art/out/`, a capture of the screen as it is today. If a player will never see the work (tooling, netcode), say so in one line.
+    validations:
+      required: true
+  - type: textarea
+    id: verify
+    attributes:
+      label: How it is verified, with numbers
+      description: What to measure, what must not regress, which checks to run and what they return today.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: What done looks like
+    validations:
+      required: true
