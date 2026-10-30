@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "fakewaffle": {
+      "source": {
+        "source": "github",
+        "repo": "fakewaffle-llc/claude-plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "fakewaffle-core@fakewaffle": true
+  }
+}
